@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 
 /* Override dark mode to ensure light theme */
@@ -13,5 +13,9 @@ html {
   background-color: #f9fafb;
 }
 html, body {
-  font-family: var(--font-playfair, serif);
+  font-family: var(--font-playfair, serif);}
+
+@theme inline {
+  --color-blue-600: #554de8;
+  --color-blue-700: #4338ca;
 }
