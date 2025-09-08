@@ -6,6 +6,7 @@ import Link from 'next/link';
 import CartItem from '../components/CartItem';
 import { books } from '../data/books';
 import { Book, CartItem as CartItemType } from '../types';
+import { ShoppingCart } from 'lucide-react';
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<{ book: Book; quantity: number }[]>([]);
@@ -87,12 +88,12 @@ export default function CartPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-gray-800 mb-8">Shopping Cart</h1>
+      <h1 className="text-3xl font-bold text-blue-900 mb-8">Shopping Cart</h1>
       
       {cartItems.length === 0 ? (
         <div className="text-center py-12 bg-white rounded-lg shadow-md">
           <h2 className="text-xl text-gray-600 mb-4">Your cart is empty</h2>
-          <Link href="/" className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition-colors cursor-pointer">
+          <Link href="/" className="bg-blue-800 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition-colors cursor-pointer">
             Continue Shopping
           </Link>
         </div>
@@ -115,8 +116,9 @@ export default function CartPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/" className="flex-1 bg-gray-500 text-white text-center py-3 rounded-md hover:bg-gray-600 transition-colors cursor-pointer">
+              <Link href="/" className="flex items-center justify-center gap-1 flex-1 bg-blue-800 text-white text-center py-3 rounded-md hover:bg-blue-600 transition-colors cursor-pointer">
                 Continue Shopping
+                <ShoppingCart size={16} />
               </Link>
               <button 
                 onClick={clearCart}

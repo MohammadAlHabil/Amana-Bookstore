@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { books } from '../../data/books';
 import { reviews } from '../../data/reviews';
 import { Book, CartItem, Review } from '../../types';
+import { ShoppingCart } from 'lucide-react';
 
 export default function BookDetailPage() {
   const [book, setBook] = useState<Book | null>(null);
@@ -125,7 +126,7 @@ export default function BookDetailPage() {
     return (
       <div className="text-center py-10">
         <h1 className="text-2xl font-bold text-red-500">{error}</h1>
-        <Link href="/" className="text-blue-500 hover:underline mt-4 inline-block cursor-pointer">
+        <Link href="/" className="text-blue-800 hover:underline mt-4 inline-block cursor-pointer">
           Back to Home
         </Link>
       </div>
@@ -165,7 +166,7 @@ export default function BookDetailPage() {
             ))}
           </div>
 
-          <div className="text-3xl font-bold text-blue-600 mb-6">${book.price.toFixed(2)}</div>
+          <div className="text-3xl font-bold text-blue-800 mb-6">${book.price.toFixed(2)}</div>
 
           <div className="flex items-center space-x-4 mb-6">
             <label htmlFor="quantity" className="font-semibold">Quantity:</label>
@@ -181,12 +182,13 @@ export default function BookDetailPage() {
 
           <button 
             onClick={handleAddToCart}
-            className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition-colors duration-300 text-lg font-semibold cursor-pointer"
+            className="flex items-center gap-2 w-full p-5 bg-blue-800 text-white py-3 rounded-md hover:bg-blue-600 transition-colors duration-300 text-lg font-semibold cursor-pointer"
           >
-            Add to Cart
+            Add to Cart 
+          <ShoppingCart size={18} />
           </button>
 
-          <Link href="/" className="text-blue-500 hover:underline mt-6 text-center cursor-pointer">
+          <Link href="/" className="text-blue-800 hover:underline mt-6 text-center cursor-pointer">
             &larr; Back to Home
           </Link>
         </div>

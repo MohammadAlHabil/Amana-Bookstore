@@ -135,7 +135,7 @@ const BookGrid: React.FC<BookGridProps> = ({ books, onAddToCart }) => {
       {/* Featured Books Section */}
       <section className="mb-12">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-3xl font-bold text-gray-800">Featured Books</h2>
+          <h2 className=" text-3xl font-bold text-blue-900">Featured Books</h2>
           {totalFeaturedPages > 1 && (
             <div className="flex items-center gap-4">
               {/* Carousel Indicators */}
@@ -280,7 +280,7 @@ const BookGrid: React.FC<BookGridProps> = ({ books, onAddToCart }) => {
 
       {/* All Books List */}
       <section>
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">All Books</h2>
+        <h2 className="text-3xl font-bold text-blue-900 mb-6">All Books</h2>
         {filteredAndSortedBooks.length > 0 ? (
           <>
             <div className="space-y-3">

@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-10">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-gray-800 cursor-pointer">
+        <Link href="/" className="text-2xl font-bold text-blue-900 cursor-pointer">
           Amana Bookstore
         </Link>
         <div className="flex items-center space-x-4">

@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Book } from '../types';
+import { ShoppingCart } from 'lucide-react';
 
 interface BookListItemProps {
   book: Book;
@@ -163,7 +164,7 @@ const BookListItem: React.FC<BookListItemProps> = ({ book, onAddToCart }) => {
                       ? 'bg-green-600 text-white cursor-pointer'
                       : isAddingToCart
                       ? 'bg-blue-400 text-white cursor-wait'
-                      : 'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer'
+                      : 'bg-blue-800 text-white hover:bg-blue-700 cursor-pointer'
                   }`}
                 >
                   {showSuccess ? (
@@ -182,7 +183,10 @@ const BookListItem: React.FC<BookListItemProps> = ({ book, onAddToCart }) => {
                       Adding...
                     </span>
                   ) : (
-                    'Add to Cart'
+                   <span className="flex items-center justify-center gap-1 ">
+                   Add to Cart
+                  <ShoppingCart size={10} />
+                 </span>
                   )}
                 </button>
               </div>

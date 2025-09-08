@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 /* Override dark mode to ensure light theme */
 @media (prefers-color-scheme: dark) {
   :root {
@@ -10,4 +11,7 @@
 /* Ensure light background without conflicting with Tailwind */
 html {
   background-color: #f9fafb;
+}
+html, body {
+  font-family: var(--font-playfair, serif);
 }
